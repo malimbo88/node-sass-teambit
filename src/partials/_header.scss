@@ -1,5 +1,5 @@
 //Header.scss
-.wrapper_menu_bar {
+.menu_bar {
   height: $menu_height;
   background-color: #fff;
   border-bottom: 1px solid $primary_color_text;
@@ -7,13 +7,22 @@
   &::after {
     @include clearfix;
   }
+
+  .box_hamburger_menu {
+    @include float_right;
+    line-height: $menu_height;
+    font-size: $font_size_icon_hamburger_menu;
+    color: $primary_color_text;
+    padding-right: $padding_left_right_menu;
+    display: none;
+  }
 }
 
 .box_logo {
   @include float_left;
-  width: 140px;
+  padding-left: $padding_left_right_menu;
   line-height: $menu_height;
-
+  width: 140px;
 
   img {
     display: inline-block;
@@ -41,7 +50,7 @@
         line-height: normal;
       }
 
-      &.with_dropdown:hover div > span {
+      &.with_dropdown:hover .menu_Item_inline > span {
         color: darken($primary_color_text, 50%);
       }
 
@@ -84,5 +93,30 @@
         }
       }
     }
+  }
+}
+
+//media query
+@media all and (max-width: 768px) {
+  .menu_bar {
+    .box_hamburger_menu {
+     display: inline-block;
+   }
+
+   .box_menu {
+     display: none;
+   }
+  }
+}
+
+@media all and (min-width: 769px) {
+  .menu_bar {
+    .box_hamburger_menu {
+     display: none;
+   }
+
+   .box_menu {
+     display: block;
+   }
   }
 }
