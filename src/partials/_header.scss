@@ -1,0 +1,88 @@
+//Header.scss
+.wrapper_menu_bar {
+  height: $menu_height;
+  background-color: #fff;
+  border-bottom: 1px solid $primary_color_text;
+
+  &::after {
+    @include clearfix;
+  }
+}
+
+.box_logo {
+  @include float_left;
+  width: 140px;
+  line-height: $menu_height;
+
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.box_menu {
+  @include float_right;
+  line-height: $menu_height;
+
+  .menu {
+    list-style: none;
+
+    li {
+      @include menu_text;
+      margin-left: $margin_menu;
+      color: $primary_color_text;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+
+
+      &:last-child {
+        line-height: normal;
+      }
+
+      &.with_dropdown:hover div > span {
+        color: darken($primary_color_text, 50%);
+      }
+
+      &:hover > a > span {
+        color: darken($primary_color_text, 50%);
+      }
+
+      a {
+        @include anchor_reset;
+
+        i {
+          font-size: $font_size_icon_menu;
+        }
+      }
+
+      .menu_dropdown {
+        @include menu_dropdown;
+        transform: translate(-20%, 40%);
+
+        li {
+          @include list_menu_dropdown;
+        }
+
+        &.visible {
+          display: block;
+        }
+      }
+
+      .menu_btn {
+        @include btn;
+        color: darken($color_text_menu_btn, 10%);
+        border: 1px solid darken($background_color_btn, 10%);
+
+        &:hover {
+          background: lighten($background_color_btn, 10%);
+        }
+
+        .btn_image {
+          @include btn_image;
+        }
+      }
+    }
+  }
+}

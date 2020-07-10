@@ -1,0 +1,50 @@
+//Mixin.scss
+@mixin anchor_reset {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@mixin float_left {
+  float: left;
+}
+
+@mixin float_right {
+  float: right;
+}
+
+@mixin btn {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+@mixin btn_image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+}
+
+@mixin menu_text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@mixin menu_dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  line-height: normal;
+  padding: 25px 25px 0 25px;
+}
+
+@mixin list_menu_dropdown {
+  list-style: none;
+  margin:0 0 25px 0;
+}

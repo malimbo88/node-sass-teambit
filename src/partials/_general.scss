@@ -1,0 +1,22 @@
+//General.scss
+//Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+//General
+body {
+  font-family: $font_family;
+}
+
+.general_container {
+  max-width: $container_max_width;
+  margin: 0 auto;
+}
