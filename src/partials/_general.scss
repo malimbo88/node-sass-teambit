@@ -17,6 +17,7 @@ body {
 }
 
 .general_container {
-  max-width: $container_max_width;
-  margin: 0 auto;
+  width: 100%;
+  min-width: $container_min_width;
+  overflow-x: hidden;
 }

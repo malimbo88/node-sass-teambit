@@ -2,9 +2,11 @@
 
 //container
 $container_max_width: 1200px;
+$container_min_width: 550px;
 
 //general
 $primary_color_text: #4e3d1e;
+$secondary_color_background: #fee7d1;
 $font_family: 'Roboto', sans-serif;
 
 //Header
@@ -17,3 +19,21 @@ $font_size_icon_hamburger_menu: 30px;
 //btn
 $color_text_menu_btn: #3f51b5;
 $background_color_btn: #3f51b5;
+
+//header
+$header_height: 600px;
+
+//jumbotrone
+$jumbotrone_element_width: calc(100% / 2);
+
+//section h2
+$margin_bottom_section_h2: 60px;
+
+//box_image
+$box_image_element_margin_right: 5%;
+$box_image_element_width: calc(100% / 3 - #{$box_image_element_margin_right} + #{$box_image_element_margin_right} / 3);
+$box_image_height: 120px;
+$margin_bottom_between_p_img: 30px;
+
+//section big image
+$margin_top_big_img: $margin_bottom_between_p_img * 6;

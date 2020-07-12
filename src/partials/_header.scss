@@ -1,122 +1,13 @@
-//Header.scss
-.menu_bar {
-  height: $menu_height;
-  background-color: #fff;
-  border-bottom: 1px solid $primary_color_text;
+//Header
+header {
+  width: 100%;
+  margin-top: $menu_height;
+  max-width: $container_max_width;
+  margin: 0 auto;
+  
+
 
   &::after {
     @include clearfix;
-  }
-
-  .box_hamburger_menu {
-    @include float_right;
-    line-height: $menu_height;
-    font-size: $font_size_icon_hamburger_menu;
-    color: $primary_color_text;
-    padding-right: $padding_left_right_menu;
-    display: none;
-  }
-}
-
-.box_logo {
-  @include float_left;
-  padding-left: $padding_left_right_menu;
-  line-height: $menu_height;
-  width: 140px;
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
-  }
-}
-
-.box_menu {
-  @include float_right;
-  line-height: $menu_height;
-
-  .menu {
-    list-style: none;
-
-    li {
-      @include menu_text;
-      margin-left: $margin_menu;
-      color: $primary_color_text;
-      cursor: pointer;
-      display: inline-block;
-      position: relative;
-
-
-      &:last-child {
-        line-height: normal;
-      }
-
-      &.with_dropdown:hover .menu_Item_inline > span {
-        color: darken($primary_color_text, 50%);
-      }
-
-      &:hover > a > span {
-        color: darken($primary_color_text, 50%);
-      }
-
-      a {
-        @include anchor_reset;
-
-        i {
-          font-size: $font_size_icon_menu;
-        }
-      }
-
-      .menu_dropdown {
-        @include menu_dropdown;
-        transform: translate(-20%, 40%);
-
-        li {
-          @include list_menu_dropdown;
-        }
-
-        &.visible {
-          display: block;
-        }
-      }
-
-      .menu_btn {
-        @include btn;
-        color: darken($color_text_menu_btn, 10%);
-        border: 1px solid darken($background_color_btn, 10%);
-
-        &:hover {
-          background: lighten($background_color_btn, 10%);
-        }
-
-        .btn_image {
-          @include btn_image;
-        }
-      }
-    }
-  }
-}
-
-//media query
-@media all and (max-width: 768px) {
-  .menu_bar {
-    .box_hamburger_menu {
-     display: inline-block;
-   }
-
-   .box_menu {
-     display: none;
-   }
-  }
-}
-
-@media all and (min-width: 769px) {
-  .menu_bar {
-    .box_hamburger_menu {
-     display: none;
-   }
-
-   .box_menu {
-     display: block;
-   }
   }
 }

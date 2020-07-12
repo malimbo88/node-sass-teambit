@@ -99,7 +99,7 @@
 $(document).ready(function () {
   $(".with_dropdown").hover(function () {
     var menuDropdownHtml = $(this).children(".menu_dropdown");
-    var menuDropdownIcon = $(this).find(".menu_inline > i"); //Cambio icona menu Dropdown
+    var menuDropdownIcon = $(this).find(".menu_item_inline > i"); //Cambio icona menu Dropdown
 
     if (menuDropdownIcon.hasClass("fa-chevron-down")) {
       menuDropdownIcon.removeClass("fa-chevron-down");
@@ -111,7 +111,13 @@ $(document).ready(function () {
 
 
     menuDropdownHtml.toggleClass("visible");
-  });
+  }); //end Header Menu Dropdown
+  //Header Hamburger menu Dropdown
+
+  $(".hamburger_icon").click(function () {
+    var hamburgerMenuHtml = $(".hamburger_menu");
+    hamburgerMenuHtml.toggleClass("visible");
+  }); //end Header Hamburger menu Dropdown
 }); //end jquery
 
 /***/ }),
